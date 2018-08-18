@@ -232,7 +232,7 @@ top
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   height: 100vh;
-  background-image: url("/dist/img/kv.jpg");
+  background-image: url("../img/kv.jpg");
   background-size: cover;
   background-position: center; }
 
