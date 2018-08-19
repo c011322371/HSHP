@@ -124,6 +124,9 @@ sidebar
   position: fixed;
   top: 0;
   left: 0; }
+  @media screen and (max-width: 510px) {
+    .sidebar {
+      display: none; } }
   .sidebar .navList {
     padding: 25px;
     color: #FFFFFF; }
@@ -192,6 +195,10 @@ mainContents
   width: calc(100% - 225px);
   min-height: 100vh;
   margin-left: 225px; }
+  @media screen and (max-width: 510px) {
+    .mainContents {
+      width: 100%;
+      margin-left: 0; } }
 
 .sectionTitle {
   position: relative;
@@ -216,6 +223,9 @@ mainContents
     height: 2px;
     background: black;
     z-index: -1; }
+  @media screen and (max-width: 510px) {
+    .sectionTitle:before {
+      width: 100%; } }
 
 main > section:not(:first-child) {
   padding: 30px 30px 60px; }
@@ -243,6 +253,11 @@ top
   font-weight: bold;
   line-height: 75px;
   color: #FFFFFF; }
+  @media screen and (max-width: 510px) {
+    .intro {
+      padding: 25px 30px;
+      font-size: 30px;
+      line-height: 30px; } }
 
 .moreBtn {
   margin-top: auto;
@@ -308,6 +323,9 @@ portfolio
 .portfolioItemList {
   font-size: 0;
   margin-left: -30px; }
+  @media screen and (max-width: 510px) {
+    .portfolioItemList {
+      margin-left: 0; } }
   .portfolioItemList > li {
     overflow: hidden;
     margin-left: 30px;
@@ -317,6 +335,14 @@ portfolio
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: .25rem;
     vertical-align: top; }
+    @media screen and (max-width: 510px) {
+      .portfolioItemList > li {
+        width: 100%;
+        margin-left: 0; }
+        .portfolioItemList > li + li {
+          margin-top: 30px; }
+        .portfolioItemList > li:nth-child(4n) {
+          margin-top: 0; } }
     .portfolioItemList > li:nth-child(4n) {
       margin-top: 30px; }
     .portfolioItemList > li .portfolioThumb {
@@ -348,11 +374,21 @@ slides
     display: inline-block;
     vertical-align: middle;
     width: 50%; }
+    @media screen and (max-width: 510px) {
+      .slideItemList > li {
+        width: 100%; }
+        .slideItemList > li + li {
+          margin-top: 30px; }
+        .slideItemList > li:nth-child(3n) {
+          margin-top: 0px; } }
     .slideItemList > li:nth-child(3n) {
       margin-top: 30px; }
     .slideItemList > li > iframe {
       width: 100%;
       height: 25vw; }
+      @media screen and (max-width: 510px) {
+        .slideItemList > li > iframe {
+          height: 50vw; } }
 
 /*---------------------------------------------------------------------
 footer
