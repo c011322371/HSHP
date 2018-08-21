@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="156a9bf7-d69a-44c7-852e-64bd8a48abe3" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/all.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-brands-400.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-brands-400.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-brands-400.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-brands-400.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-brands-400.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-regular-400.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-regular-400.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-regular-400.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-regular-400.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-regular-400.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-solid-900.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-solid-900.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-solid-900.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-solid-900.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/webfonts/fa-solid-900.woff2" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.css" afterPath="$PROJECT_DIR$/dist/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejs/index.ejs" afterPath="$PROJECT_DIR$/src/ejs/index.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/common.scss" afterPath="$PROJECT_DIR$/src/sass/common.scss" />
     </list>
@@ -24,24 +42,24 @@
     <favorites_list name="HSHP" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6245028">
+    <splitter split-orientation="horizontal" split-proportion="0.548926">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ejs/index.ejs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
+                <state relative-caret-position="105">
                   <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="common.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/common.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+                <state relative-caret-position="186">
+                  <caret line="264" column="41" lean-forward="true" selection-start-line="264" selection-start-column="41" selection-end-line="264" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -54,8 +72,8 @@
           <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ejs/index.ejs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="174">
-                  <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="196" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="196" />
                   <folding />
                 </state>
               </provider>
@@ -124,8 +142,8 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/js/script.js" />
-        <option value="$PROJECT_DIR$/src/sass/common.scss" />
         <option value="$PROJECT_DIR$/src/ejs/index.ejs" />
+        <option value="$PROJECT_DIR$/src/sass/common.scss" />
       </list>
     </option>
   </component>
@@ -387,12 +405,12 @@
       <updated>1534344819767</updated>
       <workItem from="1534344822301" duration="303000" />
       <workItem from="1534345131504" duration="31927000" />
-      <workItem from="1534825681667" duration="1716000" />
+      <workItem from="1534825681667" duration="2560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33946000" />
+    <option name="totallyTimeSpent" value="34790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,18 +547,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/common.scss">
+    <entry file="file://$PROJECT_DIR$/src/ejs/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        <state relative-caret-position="105">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejs/index.ejs">
+    <entry file="file://$PROJECT_DIR$/src/sass/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="186">
+          <caret line="264" column="41" lean-forward="true" selection-start-line="264" selection-start-column="41" selection-end-line="264" selection-end-column="41" />
           <folding />
         </state>
       </provider>

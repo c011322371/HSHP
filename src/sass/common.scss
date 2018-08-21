@@ -70,9 +70,10 @@ sidebar
         vertical-align: middle;
         &:before {
           content: "\f013";
+          font-family: "Font Awesome 5 Free";
+          font-weight: bold;
           display: inline-block;
           margin-right: 10px;
-          font-family: FontAwesome;
           font-size: 13px;
           vertical-align: middle;
           color: DARKGREY;
@@ -206,9 +207,10 @@ top
   a {
     &:before {
       content: "\f103";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
       display: inline-block;
       margin-right: 10px;
-      font-family: FontAwesome;
       animation: moreBtnDown 1.5s linear infinite;
     }
     display: inline-block;
@@ -260,9 +262,10 @@ skill
   > dd {
     &:before {
       content: "\f101";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
       display: inline-block;
       margin-right: 6px;
-      font-family: FontAwesome;
     }
     > ul {
       list-style: disc;
