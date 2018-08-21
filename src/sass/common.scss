@@ -45,6 +45,9 @@ html, body {
 sidebar
 ---------------------------------------------------------------------*/
 .sidebar {
+  > * {
+    min-height: 0%!important; //IE flex-flow: column nowrap 対策
+  }
   @include max-screen($breakpoint-mobile) {
     display: none;
   }
@@ -121,6 +124,9 @@ sidebar
 mainContents
 ---------------------------------------------------------------------*/
 .mainContents {
+  > * {
+    min-height: 0%!important; //IE flex-flow: column nowrap 対策
+  }
   @include max-screen($breakpoint-mobile) {
     width: 100%;
     margin-left: 0;

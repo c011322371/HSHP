@@ -124,6 +124,8 @@ sidebar
   position: fixed;
   top: 0;
   left: 0; }
+  .sidebar > * {
+    min-height: 0% !important; }
   @media screen and (max-width: 510px) {
     .sidebar {
       display: none; } }
@@ -195,6 +197,8 @@ mainContents
   width: calc(100% - 225px);
   min-height: 100vh;
   margin-left: 225px; }
+  .mainContents > * {
+    min-height: 0% !important; }
   @media screen and (max-width: 510px) {
     .mainContents {
       width: 100%;
