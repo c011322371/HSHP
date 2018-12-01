@@ -1,0 +1,221 @@
+{
+  "page_title": "佐々木耀 | Hikaru Sasaki",
+  "navigation": [
+    {
+      "name": "TOP",
+      "href": "#top"
+    },
+    {
+      "name": "ABOUT",
+      "href": "#about"
+    },
+    {
+      "name": "SKILL",
+      "href": "#skill"
+    },
+    {
+      "name": "WORK",
+      "href": "#work"
+    }
+  ],
+  "about": {},
+  "skill": [
+    {
+      "category": "言語(フロントエンド)",
+      "name": "HTML",
+      "duration": "2年",
+      "description": "仕様・デザインに合わせ実装可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "CSS",
+      "duration": "2年",
+      "description": "仕様・デザインに合わせ実装可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "EJS",
+      "duration": "1年",
+      "description": "仕様・デザインに合わせ実装可能、簡単なプログラミングが可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "Stylus",
+      "duration": "1年",
+      "description": "仕様・デザインに合わせ実装可能、簡単なプログラミングが可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "Sass",
+      "duration": "1.5年",
+      "description": "仕様・デザインに合わせ実装可能、簡単なプログラミングが可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "java script",
+      "duration": "2年",
+      "description": "基本的なプログラミング（es6含め）は実装可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "jQuery",
+      "duration": "2年",
+      "description": "フロントエンド領域で基本的に必要とされるwebの機能は実装可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "Vue.js",
+      "duration": "1ヶ月",
+      "description": "自己学習で使用（実務外）"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "React.js",
+      "duration": "半年",
+      "description": "rect-tempatesを用いた実務実装経験あり、簡単なプログラミングが可能"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "D3.js",
+      "duration": "1ヶ月",
+      "description": "自己学習で使用（実務外）"
+    },
+    {
+      "category": "言語(フロントエンド)",
+      "name": "Immutable.js",
+      "duration": "半年",
+      "description": "簡単なプログラミングが可能"
+    },
+    {
+      "category": "ツール",
+      "name": "Git",
+      "duration": "2年",
+      "description": "使用可能"
+    },
+    {
+      "category": "ツール",
+      "name": "gulp",
+      "duration": "1年半",
+      "description": "使用可能"
+    },
+    {
+      "category": "ツール",
+      "name": "webpack",
+      "duration": "1ヶ月",
+      "description": "使用可能"
+    },
+    {
+      "category": "クリエイティブツール",
+      "name": "Photoshop",
+      "duration": "1年",
+      "description": "基本操作可能"
+    },
+    {
+      "category": "クリエイティブツール",
+      "name": "Illustrator",
+      "duration": "1年",
+      "description": "基本操作可能"
+    },
+    {
+      "category": "クリエイティブツール",
+      "name": "sketch",
+      "duration": "半年",
+      "description": "基本操作可能"
+    },
+    {
+      "category": "言語(その他)",
+      "name": "java",
+      "duration": "1年",
+      "description": "簡単なプログラミングが可能 (大学時代に履修)"
+    },
+    {
+      "category": "言語(その他)",
+      "name": "C言語",
+      "duration": "1年",
+      "description": "簡単なプログラミングが可能 (大学時代に履修)"
+    },
+    {
+      "category": "言語(その他)",
+      "name": "PHP",
+      "duration": "半年",
+      "description": "簡単なプログラミングが可能 (大学時代に履修)"
+    },
+    {
+      "category": "言語(その他)",
+      "name": "mySQL",
+      "duration": "半年",
+      "description": "簡単なプログラミングが可能 (大学時代に履修)"
+    },
+    {
+      "category": "言語(その他)",
+      "name": "Python",
+      "duration": "半年",
+      "description": "簡単なプログラミングが可能 (卒業研究で使用)"
+    },
+    {
+      "category": "言語(その他)",
+      "name": "Google Apps Script",
+      "duration": "1年",
+      "description": "簡単なプログラミングが可能、外部API(LINE APIなど)との連携実装経験あり"
+    },
+    {
+      "category": "ツール(その他)",
+      "name": "docker",
+      "duration": "半年",
+      "description": "卒業研究で使用"
+    },
+    {
+      "category": "ツール(その他)",
+      "name": "深層学習(caffe, chainer)",
+      "duration": "半年",
+      "description": "自己学習で使用"
+    },
+    {
+      "category": "ツール(その他)",
+      "name": "DIGITS",
+      "duration": "半年",
+      "description": "卒業研究で使用、画像認識に使用"
+    },
+    {
+      "category": "ツール(その他)",
+      "name": "dlib",
+      "duration": "半年",
+      "description": "卒業研究で使用、検出器作成など"
+    },
+    {
+      "category": "ツール(その他)",
+      "name": "Unity",
+      "duration": "1ヶ月",
+      "description": "自己学習で使用"
+    },
+    {
+      "category": "ツール(その他)",
+      "name": "Electron",
+      "duration": "1ヶ月",
+      "description": "自己学習経験、導入〜簡単な実装まで"
+    }
+  ],
+  "work": {
+    "lifework": [
+      {
+        "title": "HEAD GENERATOR",
+        "description": "作業効率化用。metaタグをカスタマイズして出力し、コピーアンドペーストできるジェネレータのようなもの。",
+        "date": "2018/01",
+        "img": "./img/headgenerator.png",
+        "href": "https://headgenerator.netlify.com/"
+      },
+      {
+        "title": "Photostdio NATURA",
+        "description": "フォトスタジオ　ナチューラのホームページ。画像の入れ替えをしやすいようにjsonで管理できるように実装してます。",
+        "date": "2017/09",
+        "img": "./img/photostudionatura.png",
+        "href": "https://photostudionatura.netlify.com/"
+      }
+    ],
+    "slide": [
+      "https://docs.google.com/presentation/d/e/2PACX-1vQ_Rq1tFZ-aTNYhDUbiUrOYvhnk97-gdwqKUtykm0VU5G-n7lEZsoqp0vNpYx55l2i95KjwaZOxUJtm/embed?start=false&loop=false&delayms=3000",
+      "https://docs.google.com/presentation/d/e/2PACX-1vTgxAIlhI5a5clQ1p48eDP2dgIOExcEWmpVVYPfZoPmeMc5IASD8TaSG8NCvCMW64uu-37K4zl4hgjF/embed?start=false&loop=false&delayms=3000"
+    ]
+  },
+  "copyright": "Copyright © H.sasaki 2018"
+}

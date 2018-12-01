@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* margin padding reset */
 body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
   margin: 0;
@@ -104,7 +105,7 @@ keyframes
 main
 ---------------------------------------------------------------------*/
 html, body {
-  font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   word-break: break-word; }
 
 /*---------------------------------------------------------------------
@@ -123,15 +124,15 @@ sidebar
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  color: #FFFFFF; }
   .sidebar > * {
     min-height: 0% !important; }
   @media screen and (max-width: 510px) {
     .sidebar {
       display: none; } }
   .sidebar .navList {
-    padding: 25px;
-    color: #FFFFFF; }
+    padding: 25px; }
     .sidebar .navList > li + li {
       margin-top: 30px; }
     .sidebar .navList > li > a {
@@ -187,6 +188,9 @@ sidebar
 /*---------------------------------------------------------------------
 mainContents
 ---------------------------------------------------------------------*/
+main {
+  padding: 0 18px; }
+
 .mainContents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,10 +211,10 @@ mainContents
 
 .sectionTitle {
   position: relative;
-  margin-bottom: 60px;
+  padding: 24px 0;
   text-align: center;
   font-weight: bold;
-  font-size: 40px; }
+  font-size: 18px; }
   .sectionTitle > span {
     background: white;
     padding: 0 15px; }
@@ -224,7 +228,7 @@ mainContents
             transform: translateY(-50%);
     margin: auto;
     display: block;
-    width: 50%;
+    width: 25%;
     height: 2px;
     background: black;
     z-index: -1; }
@@ -232,8 +236,21 @@ mainContents
     .sectionTitle:before {
       width: 100%; } }
 
-main > section:not(:first-child) {
-  padding: 30px 30px 60px; }
+.sectionContents {
+  padding: 32px 0; }
+
+.subSection + .subSection {
+  margin-top: 64px; }
+
+.subSectionTitle {
+  text-align: center;
+  width: 120px;
+  margin: auto;
+  padding: 12px 0;
+  border-bottom: solid 1px; }
+
+.subsectionContents {
+  padding: 32px 0; }
 
 /*---------------------------------------------------------------------
 top
@@ -251,18 +268,23 @@ top
   background-size: cover;
   background-position: center; }
 
-.intro {
+h1 {
   padding: 30px 45px;
-  text-transform: uppercase;
-  font-size: 75px;
   font-weight: bold;
-  line-height: 75px;
   color: #FFFFFF; }
   @media screen and (max-width: 510px) {
-    .intro {
+    h1 {
       padding: 25px 30px;
       font-size: 30px;
       line-height: 30px; } }
+  h1 .myTitle,
+  h1 .jpName {
+    color: #ccc;
+    font-size: 16px;
+    border-bottom: solid 1px;
+    display: inline-block; }
+  h1 .enName {
+    font-size: 32px; }
 
 .moreBtn {
   margin-top: auto;
@@ -271,8 +293,7 @@ top
   .moreBtn a {
     display: inline-block;
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px 80px;
-    font-size: 18px;
+    padding: 20px 60px;
     font-weight: bold;
     border-radius: .25rem;
     -webkit-transition: .3s;
@@ -291,49 +312,58 @@ top
 /*---------------------------------------------------------------------
 skill
 ---------------------------------------------------------------------*/
-.skillHead {
-  font-size: 25px;
-  font-weight: bold; }
-  .skillHead:not(:first-child) {
-    margin-top: 30px; }
-  .skillHead:before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 20px;
-    margin-right: 5px;
-    background: #212121; }
+.skill .skillSeat {
+  width: 100%;
+  font-size: 12px; }
 
-.skillList > li:first-child {
-  margin-top: 5px; }
+.skill table, .skill td, .skill th {
+  border: 1px solid #CCCCCC;
+  border-collapse: collapse;
+  color: #333333; }
+
+.skill td, .skill th {
+  padding: 3px;
+  width: 30px;
+  height: 25px;
+  vertical-align: top; }
+
+.skill td.category,
+.skill td.period,
+.skill td.level {
+  background-color: #E6E6E6;
+  font-weight: bold; }
+
+.skill td.category {
+  width: 40%; }
+
+.skill td.period {
+  width: 10%; }
+
+.skill td.level {
+  width: 50%; }
+
+.skill th {
+  background: #f0e6cc; }
+
+.skill .even {
+  background: #fbf8f0; }
+
+.skill .odd {
+  background: #fefcf9; }
 
 .skillList > li + li {
-  margin-top: 15px; }
-
-.skillItem > dt {
-  font-weight: bold; }
-
-.skillItem > dd:before {
-  content: "\f101";
-  font-family: "Font Awesome 5 Free";
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 6px; }
-
-.skillItem > dd > ul {
-  list-style: disc;
-  margin-left: 30px; }
+  margin-top: 32px; }
 
 /*---------------------------------------------------------------------
-portfolio
+work
 ---------------------------------------------------------------------*/
-.portfolioItemList {
+.workItemList .lifeworkList {
   font-size: 0;
   margin-left: -30px; }
   @media screen and (max-width: 510px) {
-    .portfolioItemList {
+    .workItemList .lifeworkList {
       margin-left: 0; } }
-  .portfolioItemList > li {
+  .workItemList .lifeworkList > li {
     overflow: hidden;
     margin-left: 30px;
     display: inline-block;
@@ -341,36 +371,37 @@ portfolio
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: .25rem;
-    vertical-align: top; }
+    vertical-align: top;
+    font-size: 14px; }
     @media screen and (max-width: 510px) {
-      .portfolioItemList > li {
+      .workItemList .lifeworkList > li {
         width: 100%;
         margin-left: 0; }
-        .portfolioItemList > li + li {
+        .workItemList .lifeworkList > li + li {
           margin-top: 30px; }
-        .portfolioItemList > li:nth-child(4n) {
+        .workItemList .lifeworkList > li:nth-child(4n) {
           margin-top: 0; } }
-    .portfolioItemList > li:nth-child(4n) {
+    .workItemList .lifeworkList > li:nth-child(4n) {
       margin-top: 30px; }
-    .portfolioItemList > li .portfolioThumb {
+    .workItemList .lifeworkList > li .workThumb {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125);
       -webkit-transition: .5s;
       transition: .5s; }
-      .portfolioItemList > li .portfolioThumb:hover {
+      .workItemList .lifeworkList > li .workThumb:hover {
         -webkit-transform: scale(1.05);
                 transform: scale(1.05); }
-      .portfolioItemList > li .portfolioThumb > img {
+      .workItemList .lifeworkList > li .workThumb > img {
         width: 100%;
         border-top-left-radius: calc(.25rem - 1px);
         border-top-right-radius: calc(.25rem - 1px); }
-    .portfolioItemList > li .portfolioTextWrap {
+    .workItemList .lifeworkList > li .workTextWrap {
       padding: 20px; }
-      .portfolioItemList > li .portfolioTextWrap .portfolioTitle {
+      .workItemList .lifeworkList > li .workTextWrap .workTitle {
         font-size: 18px;
         font-weight: bold; }
-      .portfolioItemList > li .portfolioTextWrap .portfolioText {
-        margin-top: 10px;
-        font-size: 14px; }
+      .workItemList .lifeworkList > li .workTextWrap .workDate,
+      .workItemList .lifeworkList > li .workTextWrap .workText {
+        margin-top: 10px; }
 
 /*---------------------------------------------------------------------
 slides

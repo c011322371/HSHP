@@ -1,0 +1,42 @@
+<li>
+  <section class="lifework subSection">
+    <h3 class="subSectionTitle"><span>LIFE WORK</span></h2>
+      <div class="subsectionContents">
+        <ul class="lifeworkList">
+          <% dataType.lifework.forEach(function(item) { %>
+          <li>
+            <a href="<%- item.href %>">
+              <div class="workThumb">
+                <img src="<%- item.img %>" alt="">
+              </div>
+            </a>
+            <div class="workTextWrap">
+              <h3 class="workTitle">
+                <%- item.title %>
+              </h3>
+              <p class="workDate">制作時期：
+                <%- item.date %>
+              </p>
+              <p class="workText">
+                <%- item.description %>
+              </p>
+            </div>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+  </section>
+  <section class="slides subSection">
+    <h3 class="subSectionTitle"><span>SLIDES</span></h2>
+      <div class="seusectionContents">
+        <ul class="slideItemList subsectionContents">
+          <% dataType.slide.forEach(function(slide) { %>
+          <li><iframe src="<%- slide %>" frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
+              webkitallowfullscreen="true">
+            </iframe>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+  </section>
+</li>

@@ -6,7 +6,7 @@ MOREBTN_SMOOTHSCROLL = {
   },
   setParameter: function () {
     this.$jscMoreBtn = $('.jscMoreBtn');
-    this.$topSection = $('.jscTopSection');
+    this.$topSection = $('#top');
   },
   smoothscroll: function () {
     this.$jscMoreBtn.on('click', $.proxy(function () {

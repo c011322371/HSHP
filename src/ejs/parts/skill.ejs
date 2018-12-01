@@ -1,0 +1,49 @@
+<%
+// スキルカテゴリーが何種類・何個あるのかをあらかじめ計算しオブジェクト化させておく。
+var category;
+var obj = {};
+dataType.forEach(function(item, index) { 
+  if(category === item.category) { // 前回処理していたカテゴリー情報と比較する
+    obj[item.category] = obj[item.category] + 1; // カテゴリーが被ればインクリメントする
+  }
+  else {
+    obj[item.category] = 1; // 新規カテゴリーを1でカウントして登録する
+  }
+  category = item.category; // 処理中のカテゴリー情報を保存する
+});
+%>
+
+<section id="skill" class="skill section">
+  <h2 class="sectionTitle"><span>SKILL</span></h2>
+  <div class="sectionContents">
+    <ul class="skillList">
+      <li>
+        <h3 class="skillCategory"></h3>
+        <table class="skillSeat">
+          <tbody>
+            <tr>
+              <td class="category" colspan="2">種類</td>
+              <td class="period">使用期間</td>
+              <td class="level">レベル</td>
+            </tr>
+            <% 
+            var category = false;
+            dataType.forEach(function(item, index) { %>
+              <tr>
+                <% if (!category || category !== item.category) { %>
+                <td rowspan="<%- obj[item.category] %>"><%- item.category %></td>
+                <% } %>
+                <td><%- item.name %></td>
+                <td><%- item.duration %></td>
+                <td><%- item.description %></td>
+              </tr>
+            <%
+            category = item.category;
+            });
+            %>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </div>
+</section>

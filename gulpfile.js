@@ -39,12 +39,16 @@ gulp.task("sass", function () { //taskの登録
 // ejs
 //---------------------------------------------------------------------
 var ejs = require("gulp-ejs");
+var jsonData = require('./src/json/data.json');
 
 gulp.task("ejs", function () {
   gulp.src(
-    ["src/ejs/**/*.ejs", '!' + "src/ejs/**/_*.ejs"] //参照するディレクトリ、出力を除外するファイル
+    ["./src/ejs/**/index.ejs", '!' + "./src/ejs/**/_*.ejs"] //参照するディレクトリ、出力を除外するファイル
   )
-    .pipe(ejs())
+    .pipe(plumber())
+    .pipe(ejs({
+      jsonData: jsonData //jsonData に data.json を取り込む
+    }))
     .pipe(rename({ extname: ".html" })) //拡張子をhtmlに
     .pipe(gulp.dest("./dist/")) //出力先
 });
@@ -56,11 +60,9 @@ gulp.task("ejs", function () {
 var webserver = require('gulp-webserver');
 
 gulp.task('webserver', function () {
-  gulp.src('./')
+  gulp.src('./dist')
     .pipe(webserver({
-      livereload: true,
-      open: "http://localhost:8000/dist/",
-      port: 8000
+      livereload: true
     }));
 });
 
@@ -69,6 +71,7 @@ gulp.task('webserver', function () {
 //---------------------------------------------------------------------
 
 gulp.task("default", ['webserver'], function () {
+  // gulp.watch("./src/ejs/**/**.ejs", ["ejs"]);
   gulp.watch("./src/sass/**/*.scss", ["sass"]);
   gulp.watch([path.join('./src/', 'js/*.js'), path.join('!', './src/', 'js/*.min.js')], ['js']);
 });
