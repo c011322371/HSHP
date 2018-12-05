@@ -22,35 +22,55 @@ $breakpoint-mobile: 510px;
     @content;
   }
 }
+
+@mixin hover_animation() {
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
 /*---------------------------------------------------------------------
 keyframes
 ---------------------------------------------------------------------*/
 @keyframes spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes moreBtnDown {
-  0% {transform: translateY(0);}
-  100% {transform: translateY(3px); opacity: 0.5;}
-}
 /*---------------------------------------------------------------------
 main
 ---------------------------------------------------------------------*/
-html, body {
+html,
+body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   word-break: break-word;
+  line-height: 1.4;
 }
+
+.linkColor {
+  color: #0FA07F;
+}
+
 /*---------------------------------------------------------------------
 sidebar
 ---------------------------------------------------------------------*/
 .sidebar {
-  > * {
-    min-height: 0%!important; //IE flex-flow: column nowrap 対策
+  >* {
+    min-height: 0% !important; //IE flex-flow: column nowrap 対策
   }
+
   @include max-screen($breakpoint-mobile) {
     display: none;
   }
+
   display: flex;
   flex-flow: column nowrap;
   width: 225px;
@@ -59,50 +79,66 @@ sidebar
   position: fixed;
   top: 0;
   left: 0;
-  color: #FFFFFF;
+
   .navList {
     padding: 25px;
-    > li {
-      + li {
+
+    >li {
+      +li {
         margin-top: 30px;
       }
-      > a {
+
+      >a {
         vertical-align: middle;
+        transition: 0.1s;
+        color: rgba(255, 255, 255, 1);
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
         &:before {
-          content: "\f013";
+          content: "\f4d8";
           font-family: "Font Awesome 5 Free";
           font-weight: bold;
           display: inline-block;
           margin-right: 10px;
           font-size: 13px;
           vertical-align: middle;
-          color: DARKGREY;
+          color: #106329;
+          transition: 0.1s;
         }
+
         &:hover:before {
-          animation: spin 3s linear infinite;
+          transform: translateY(2px);
         }
       }
     }
   }
+
   .outboundLinkList {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: auto;
     padding: 15px 0;
-    > li {
-      + li {
+
+    >li {
+      +li {
         margin-left: 25px;
       }
+
       background: #FFFFFF;
       color: #000000;
       border-radius: 50%;
       opacity: 1;
       transition: 0.3s;
+
       &:hover {
         opacity: 0.6;
       }
-      > a {
+
+      >a {
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -110,10 +146,13 @@ sidebar
         text-align: center;
         font-size: 20px;
       }
-      &.githubLink { // 例外
+
+      &.githubLink {
+        // 例外
         background: transparent;
         color: #FFFFFF;
-        > a {
+
+        >a {
           font-size: 30px;
         }
       }
@@ -125,22 +164,28 @@ sidebar
 mainContents
 ---------------------------------------------------------------------*/
 main {
-  padding: 0 18px;
+  padding: 36px 18px 18px;
 }
 
 .mainContents {
-  > * {
-    min-height: 0%!important; //IE flex-flow: column nowrap 対策
+  >* {
+    min-height: 0% !important; //IE flex-flow: column nowrap 対策
   }
+
   @include max-screen($breakpoint-mobile) {
     width: 100%;
     margin-left: 0;
   }
+
   display: flex;
   flex-flow: column nowrap;
   width: calc(100% - 225px);
   min-height: 100vh;
   margin-left: 225px;
+}
+
+.section+.section {
+  margin-top: 48px;
 }
 
 .sectionTitle {
@@ -149,10 +194,12 @@ main {
   text-align: center;
   font-weight: bold;
   font-size: 18px;
-  > span {
+
+  >span {
     background: white;
     padding: 0 15px;
   }
+
   &:before {
     content: '';
     position: absolute;
@@ -167,6 +214,7 @@ main {
     background: black;
     z-index: -1;
   }
+
   @include max-screen($breakpoint-mobile) {
     &:before {
       width: 100%;
@@ -178,8 +226,8 @@ main {
   padding: 32px 0;
 }
 
-.subSection + .subSection {
-  margin-top: 64px;
+.subSection+.subSection {
+  margin-top: 32px;
 }
 
 .subSectionTitle {
@@ -200,7 +248,7 @@ top
 .top {
   display: flex;
   flex-flow: column nowrap;
-  height: 100vh;
+  height: 40vh;
   background-image: url('../img/kv.jpg');
   background-size: cover;
   background-position: center;
@@ -212,45 +260,235 @@ h1 {
     font-size: 30px;
     line-height: 30px;
   }
+
   padding: 30px 45px;
   font-weight: bold;
   color: #FFFFFF;
+
   .myTitle,
   .jpName {
     color: #ccc;
     font-size: 16px;
     border-bottom: solid 1px;
     display: inline-block;
+    line-height: 1;
   }
+
   .enName {
     font-size: 32px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 12px 0 0;
+    }
   }
 }
 
-.moreBtn {
-  margin-top: auto;
-  margin-bottom: 120px;
-  text-align: center;
-  a {
-    &:before {
-      content: "\f103";
-      font-family: "Font Awesome 5 Free";
-      font-weight: bold;
-      display: inline-block;
-      margin-right: 10px;
-      animation: moreBtnDown 1.5s linear infinite;
-    }
-    display: inline-block;
-    background: rgba(255,255,255,0.8);
-    padding: 20px 60px;
-    font-weight: bold;
-    border-radius: .25rem;
-    transition: .3s;
-    &:hover {
-      opacity: 0.8;
+/*---------------------------------------------------------------------
+modal
+---------------------------------------------------------------------*/
+.modalWrap {
+  display: none;
+}
+
+// back
+.modalBack {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+// trigger
+.modalClose,
+.modalNext,
+.modalPrev {
+  position: absolute;
+  z-index: 1;
+}
+
+.modalClose {
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  @include hover_animation();
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: #333333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(135deg);
+  }
+}
+
+.modalNext,
+.modalPrev {
+  width: 50px;
+  height: 150px;
+  @include hover_animation();
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background: #666;
+    height: 2px;
+    width: 50px;
+  }
+}
+
+.modalNext {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+
+  &:before,
+  &:after {
+    right: 0;
+  }
+
+  &:before {
+    transform: rotate(60deg);
+    top: 35%;
+  }
+
+  &:after {
+    transform: rotate(120deg);
+    bottom: 35%;
+  }
+}
+
+.modalPrev {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  &:before,
+  &:after {
+    left: 0;
+  }
+
+  &:before {
+    transform: rotate(-60deg);
+    top: 35%;
+  }
+
+  &:after {
+    transform: rotate(-120deg);
+    bottom: 35%;
+  }
+}
+
+// modal contents
+
+.modalContents {
+  width: calc(100% - 160px);
+  height: calc(100vh - 160px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 2;
+  background: #FFFFFF;
+}
+
+.modalMainContents {
+  height: 100%;
+  padding: 50px;
+
+  .modalImage,
+  .modalInfo {
+    width: 100%;
+  }
+
+  .modalImage {
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .modalInfo {
+    height: 30%;
+    padding: 16px;
+    background: #FFFFFF;
+    overflow-y: scroll;
+  }
+}
+
+/*---------------------------------------------------------------------
+about
+---------------------------------------------------------------------*/
+.about {
+  @include min-screen($breakpoint-mobile) {
+    .sectionContents {
+      margin: 0 80px;
     }
   }
 }
+
+.aboutList {
+  font-size: 12px;
+
+  >li {
+    img {
+      width: 24px;
+      vertical-align: top;
+    }
+
+    +li {
+      margin-top: 12px;
+    }
+
+    dl {
+      display: flex;
+
+      dt {
+        min-width: 80px;
+      }
+    }
+  }
+}
+
+.aboutSiteList {
+  >li {
+    a {
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+
+    +li {
+      margin-top: 6px;
+    }
+  }
+}
+
 /*---------------------------------------------------------------------
 skill
 ---------------------------------------------------------------------*/
@@ -259,46 +497,58 @@ skill
     width: 100%;
     font-size: 12px;
   }
-  table , td, th {
+
+  table,
+  td,
+  th {
     border: 1px solid #CCCCCC;
     border-collapse: collapse;
     color: #333333;
   }
-  td, th {
+
+  td,
+  th {
     padding: 3px;
     width: 30px;
     height: 25px;
     vertical-align: top;
   }
+
   td.category,
   td.period,
   td.level {
     background-color: #E6E6E6;
     font-weight: bold;
   }
+
   td.category {
     width: 40%;
   }
+
   td.period {
     width: 10%;
   }
+
   td.level {
     width: 50%;
   }
+
   th {
     background: #f0e6cc;
   }
+
   .even {
     background: #fbf8f0;
   }
+
   .odd {
     background: #fefcf9;
   }
 }
 
 .skillList {
-  > li {
-    + li {
+  >li {
+    +li {
       margin-top: 32px;
     }
   }
@@ -307,90 +557,107 @@ skill
 /*---------------------------------------------------------------------
 work
 ---------------------------------------------------------------------*/
-.workItemList {
-  > li {
-
+.lifeworkList {
+  @include max-screen($breakpoint-mobile) {
+    margin-left: 0;
   }
-  .lifeworkList {
+
+  font-size: 0;
+  margin-left: -30px;
+
+  >li {
     @include max-screen($breakpoint-mobile) {
+      width: 100%;
       margin-left: 0;
-    }
-    font-size: 0;
-    margin-left: -30px;
-    > li {
-      @include max-screen($breakpoint-mobile) {
-        width: 100%;
-        margin-left: 0;
-        + li {
-          margin-top: 30px;
-        }
-        &:nth-child(4n) {
-          margin-top: 0;
-        }
-      }
-      &:nth-child(4n) {
+
+      +li {
         margin-top: 30px;
       }
-      overflow: hidden;
-      margin-left: 30px;
-      display: inline-block;
-      width: calc((100% - 30px * 3 ) / 3);
-      background-color: #fff;
-      border: 1px solid rgba(0,0,0,.125);
-      border-radius: .25rem;
-      vertical-align: top;
-      font-size: 14px;
-      .workThumb {
-        border-bottom: 1px solid rgba(0,0,0,.125);
-        transition: .5s;
-        &:hover {
-          transform: scale(1.05);
-        }
-        > img {
-          width: 100%;
-          border-top-left-radius: calc(.25rem - 1px);
-          border-top-right-radius: calc(.25rem - 1px);
-        }
+
+      &:nth-child(4n) {
+        margin-top: 0;
       }
-      .workTextWrap {
-        padding: 20px;
-        .workTitle {
-          font-size: 18px;
-          font-weight: bold;
-        }
-        .workDate,
-        .workText {
-          margin-top: 10px;
-        }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:nth-child(4n) {
+      margin-top: 30px;
+    }
+
+    overflow: hidden;
+    margin-left: 30px;
+    display: inline-block;
+    width: calc((100% - 30px * 3) / 3);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    vertical-align: top;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    .workThumb {
+      border-bottom: 1px solid rgba(0, 0, 0, .125);
+
+      >img {
+        width: 100%;
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+      }
+    }
+
+    .workTextWrap {
+      padding: 12px;
+      text-align: center;
+
+      .workTitle {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .workDate,
+      .workText {
+        display: none;
       }
     }
   }
 }
+
 /*---------------------------------------------------------------------
 slides
 ---------------------------------------------------------------------*/
 .slideItemList {
   font-size: 0;
-  > li {
+
+  >li {
     @include max-screen($breakpoint-mobile) {
       width: 100%;
-      + li {
+
+      +li {
         margin-top: 30px;
       }
+
       &:nth-child(3n) {
         margin-top: 0px;
       }
     }
+
     display: inline-block;
     vertical-align: middle;
     width: 50%;
+
     &:nth-child(3n) {
       margin-top: 30px;
     }
-    > iframe {
+
+    >iframe {
       @include max-screen($breakpoint-mobile) {
         height: 50vw;
       }
+
       width: 100%;
       height: 25vw;
     }

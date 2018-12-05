@@ -27,7 +27,8 @@
     <header></header>
     <%- include('./parts/top', {param:'param'}) %>
     <main>
-      <%- include('./parts/about', {dataType: data.about}) %>
+      <%- include('./parts/modal', {param:'param'}) %>
+      <%- include('./parts/about', {param:'param'}) %>
       <%- include('./parts/skill', {dataType: data.skill}) %>
       <%- include('./parts/work', {data: data}) %>
     </main>

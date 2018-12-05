@@ -1,0 +1,13 @@
+<section class="slides subSection">
+  <h3 class="subSectionTitle"><span>SLIDES</span></h3>
+  <div class="seusectionContents">
+    <ul class="slideItemList subsectionContents">
+      <% dataType.forEach(function(slide) { %>
+      <li><iframe src="<%- slide %>" frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
+          webkitallowfullscreen="true">
+        </iframe>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
