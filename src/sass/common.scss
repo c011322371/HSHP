@@ -73,7 +73,7 @@ sidebar
 
   display: flex;
   flex-flow: column nowrap;
-  width: 225px;
+  width: 200px;
   background: #212121;
   height: 100vh;
   position: fixed;
@@ -82,6 +82,7 @@ sidebar
 
   .navList {
     padding: 25px;
+    font-size: 12px;
 
     >li {
       +li {
@@ -102,7 +103,7 @@ sidebar
           font-family: "Font Awesome 5 Free";
           font-weight: bold;
           display: inline-block;
-          margin-right: 10px;
+          margin-right: 16px;
           font-size: 13px;
           vertical-align: middle;
           color: #106329;
@@ -128,8 +129,8 @@ sidebar
         margin-left: 25px;
       }
 
-      background: #FFFFFF;
-      color: #000000;
+      background-color: #999999;
+      color: #333333;
       border-radius: 50%;
       opacity: 1;
       transition: 0.3s;
@@ -150,7 +151,7 @@ sidebar
       &.githubLink {
         // 例外
         background: transparent;
-        color: #FFFFFF;
+        color: #999999;
 
         >a {
           font-size: 30px;
@@ -164,7 +165,9 @@ sidebar
 mainContents
 ---------------------------------------------------------------------*/
 main {
-  padding: 36px 18px 18px;
+  padding: 120px 40px 40px;
+  background-color: #272422;
+  color: #CCCCCC;
 }
 
 .mainContents {
@@ -179,13 +182,13 @@ main {
 
   display: flex;
   flex-flow: column nowrap;
-  width: calc(100% - 225px);
+  width: calc(100% - 200px);
   min-height: 100vh;
-  margin-left: 225px;
+  margin-left: 200px;
 }
 
 .section+.section {
-  margin-top: 48px;
+  margin-top: 120px;
 }
 
 .sectionTitle {
@@ -196,8 +199,10 @@ main {
   font-size: 18px;
 
   >span {
-    background: white;
+    background: #272422;
     padding: 0 15px;
+    position: relative;
+    z-index: 2;
   }
 
   &:before {
@@ -211,8 +216,8 @@ main {
     display: block;
     width: 25%;
     height: 2px;
-    background: black;
-    z-index: -1;
+    background: #4E4C4C;
+    z-index: 1;
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -235,7 +240,7 @@ main {
   width: 120px;
   margin: auto;
   padding: 12px 0;
-  border-bottom: solid 1px;
+  border-bottom: solid 1px #4E4C4C;
 }
 
 .subsectionContents {
@@ -251,7 +256,8 @@ top
   height: 40vh;
   background-image: url('../img/kv.jpg');
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 h1 {
@@ -302,6 +308,18 @@ modal
   z-index: 1;
 }
 
+.modalHeader {
+  width: 100%;
+  height: 50px;
+  background-color: #333333;
+  text-align: center;
+}
+
+.modalPageNum {
+  line-height: 50px;
+  letter-spacing: 5px;
+}
+
 // trigger
 .modalClose,
 .modalNext,
@@ -328,7 +346,7 @@ modal
     bottom: 0;
     left: 0;
     margin: auto;
-    background-color: #333333;
+    background-color: #CCCCCC;
   }
 
   &:before {
@@ -376,6 +394,10 @@ modal
     transform: rotate(120deg);
     bottom: 35%;
   }
+
+  &:hover {
+    transform: translateX(3px);
+  }
 }
 
 .modalPrev {
@@ -398,13 +420,18 @@ modal
     transform: rotate(-120deg);
     bottom: 35%;
   }
+
+  &:hover {
+    transform: translateX(-3px);
+  }
 }
 
 // modal contents
-
 .modalContents {
-  width: calc(100% - 160px);
-  height: calc(100vh - 160px);
+  width: calc(100% - 100px);
+  height: calc(100vh - 100px);
+  max-width: 1040px;
+  max-height: 800px;
   position: fixed;
   top: 0;
   right: 0;
@@ -416,7 +443,7 @@ modal
 }
 
 .modalMainContents {
-  height: 100%;
+  height: calc(100% - 50px);
   padding: 50px;
 
   .modalImage,
@@ -425,31 +452,95 @@ modal
   }
 
   .modalImage {
-    height: 70%;
+    height: calc(100% - 200px);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .modalInfo {
-    height: 30%;
-    padding: 16px;
-    background: #FFFFFF;
+    max-height: 200px;
+    margin-top: 48px;
+    padding: 0 16px;
+    color: #333333;
     overflow-y: scroll;
+
+    .modalInfoList {
+      .modalTitle {
+        font-size: 18px;
+      }
+
+      .modalDate {
+        margin-top: 16px;
+        font-size: 12px;
+        color: #999;
+        border-bottom: solid 1px #ccc;
+        display: inline-block;
+      }
+
+      .modalDescription {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@include max-screen($breakpoint-mobile) {
+  .modalContents {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .modalImage {
+      height: 100%;
+    }
+  }
+
+  .modalMainContents {
+    position: relative;
+    padding: 0;
+
+    .modalInfo {
+      position: absolute;
+      bottom: 0;
+      height: 20%;
+      background-color: transparent;
+      color: #CCCCCC;
+
+      .modalInfoList {
+        .modalTitle {
+          font-size: 14px;
+        }
+
+        .modalDate,
+        .modalDescription {
+          font-size: 12px;
+        }
+
+        .modalDate {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  .modalClose {
+
+    &:before,
+    &:after {
+      background-color: #CCCCCC;
+    }
+  }
+
+  .modalNext,
+  .modalPrev {
+    display: none;
   }
 }
 
 /*---------------------------------------------------------------------
 about
 ---------------------------------------------------------------------*/
-.about {
-  @include min-screen($breakpoint-mobile) {
-    .sectionContents {
-      margin: 0 80px;
-    }
-  }
-}
-
 .aboutList {
   font-size: 12px;
 
@@ -457,10 +548,11 @@ about
     img {
       width: 24px;
       vertical-align: top;
+      border-radius: 50%;
     }
 
     +li {
-      margin-top: 12px;
+      margin-top: 36px;
     }
 
     dl {
@@ -501,14 +593,13 @@ skill
   table,
   td,
   th {
-    border: 1px solid #CCCCCC;
+    // border: 1px solid #CCCCCC;
     border-collapse: collapse;
-    color: #333333;
+    // color: #333333;
   }
 
   td,
   th {
-    padding: 3px;
     width: 30px;
     height: 25px;
     vertical-align: top;
@@ -517,8 +608,10 @@ skill
   td.category,
   td.period,
   td.level {
-    background-color: #E6E6E6;
+    // background-color: #E6E6E6;
+    font-size: 16px;
     font-weight: bold;
+    border-bottom: solid 1px #4E4C4C;
   }
 
   td.category {
@@ -533,16 +626,22 @@ skill
     width: 50%;
   }
 
+  td.categoryTitle {
+    font-weight: bold;
+  }
+
+  tbody {
+    tr {
+      border-bottom: solid 1px #4E4C4C;
+
+      td {
+        padding: 12px 3px;
+      }
+    }
+  }
+
   th {
     background: #f0e6cc;
-  }
-
-  .even {
-    background: #fbf8f0;
-  }
-
-  .odd {
-    background: #fefcf9;
   }
 }
 
@@ -557,7 +656,7 @@ skill
 /*---------------------------------------------------------------------
 work
 ---------------------------------------------------------------------*/
-.lifeworkList {
+.modalItemList {
   @include max-screen($breakpoint-mobile) {
     margin-left: 0;
   }
@@ -571,7 +670,7 @@ work
       margin-left: 0;
 
       +li {
-        margin-top: 30px;
+        margin-top: 60px;
       }
 
       &:nth-child(4n) {
@@ -580,7 +679,9 @@ work
     }
 
     &:hover {
-      opacity: 0.7;
+      .workThumb {
+        transform: scale(1.05);
+      }
     }
 
     &:nth-child(4n) {
@@ -588,10 +689,10 @@ work
     }
 
     overflow: hidden;
-    margin-left: 30px;
+    margin-left: 60px;
     display: inline-block;
-    width: calc((100% - 30px * 3) / 3);
-    background-color: #fff;
+    width: calc((100% - 60px * 3) / 3);
+    background-color: #4E4C4C;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
     vertical-align: top;
@@ -600,27 +701,46 @@ work
     transition: 0.2s;
 
     .workThumb {
+      // position: relative;
+      // height: 130px;
+      // overflow: hidden;
       border-bottom: 1px solid rgba(0, 0, 0, .125);
+      transition: 0.4s;
 
       >img {
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        // margin: auto;
         width: 100%;
+        height: auto;
         border-top-left-radius: calc(.25rem - 1px);
         border-top-right-radius: calc(.25rem - 1px);
       }
     }
 
     .workTextWrap {
-      padding: 12px;
+      padding: 18px 12px;
       text-align: center;
+      background-color: #222222;
 
       .workTitle {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 16px;
       }
 
       .workDate,
       .workText {
         display: none;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      .workTextWrap {
+        .workTitle {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -629,40 +749,7 @@ work
 /*---------------------------------------------------------------------
 slides
 ---------------------------------------------------------------------*/
-.slideItemList {
-  font-size: 0;
 
-  >li {
-    @include max-screen($breakpoint-mobile) {
-      width: 100%;
-
-      +li {
-        margin-top: 30px;
-      }
-
-      &:nth-child(3n) {
-        margin-top: 0px;
-      }
-    }
-
-    display: inline-block;
-    vertical-align: middle;
-    width: 50%;
-
-    &:nth-child(3n) {
-      margin-top: 30px;
-    }
-
-    >iframe {
-      @include max-screen($breakpoint-mobile) {
-        height: 50vw;
-      }
-
-      width: 100%;
-      height: 25vw;
-    }
-  }
-}
 
 /*---------------------------------------------------------------------
 footer

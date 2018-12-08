@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
+  <link rel="icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="css/common.css">
   <script type="text/javascript" src="js/min/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/min/jquery.easing.1.3.min.js"></script>
@@ -51,7 +52,7 @@
   </div>
   <div class="mainContents">
     <header></header>
-    <div id="top" class="top">
+    <div id="top" class="top jscKV">
   <h1>
     <p class="myTitle">Front End Engineer</p>
     <p class="enName">Hikaru Sasaki</p>
@@ -62,19 +63,22 @@
       <div class="modalWrap jscModal">
   <div class="modalBack jscModalClose"></div>
   <div class="modalContents">
-    <div class="modalTrigger">
+    <div class="modalHeader">
+      <div class="modalPageNum"><span class="jscCurrentNum">1</span>/<span class="jscItemLength">1</span></div>
       <div class="modalClose jscModalClose"></div>
+    </div>
+    <div class="modalTrigger">
       <div class="modalNext jscModalNext"></div>
       <div class="modalPrev jscModalPrev"></div>
     </div>
-    <div class="modalMainContents">
+    <div class="modalMainContents jscModalMainContents">
       <section class="modalImage jscModalImage"></section>
       <section class="modalInfo">
-      <ul class="modalInfoList">
-        <li class="jscModalTitle"></li>
-        <li class="jscModalDate"></li>
-        <li class="jscModalDescription"></li>
-      </ul>
+        <ul class="modalInfoList">
+          <li class="modalTitle jscModalTitle"></li>
+          <li class="modalDate jscModalDate"></li>
+          <li class="modalDescription jscModalDescription"></li>
+        </ul>
       </section>
     </div>
   </div>
@@ -152,7 +156,7 @@
             
               <tr>
                 
-                <td rowspan="11">言語(フロントエンド)</td>
+                <td rowspan="11" class="categoryTitle">言語(フロントエンド)</td>
                 
                 <td>HTML</td>
                 <td>2年</td>
@@ -231,7 +235,7 @@
             
               <tr>
                 
-                <td rowspan="3">ツール</td>
+                <td rowspan="3" class="categoryTitle">ツール</td>
                 
                 <td>Git</td>
                 <td>3年</td>
@@ -254,7 +258,7 @@
             
               <tr>
                 
-                <td rowspan="3">クリエイティブツール</td>
+                <td rowspan="3" class="categoryTitle">クリエイティブツール</td>
                 
                 <td>Photoshop</td>
                 <td>1年</td>
@@ -277,7 +281,7 @@
             
               <tr>
                 
-                <td rowspan="6">言語(その他)</td>
+                <td rowspan="6" class="categoryTitle">言語(その他)</td>
                 
                 <td>java</td>
                 <td>1年</td>
@@ -316,12 +320,12 @@
                 
                 <td>Google Apps Script</td>
                 <td>1年</td>
-                <td>簡単なプログラミングが可能</td>
+                <td>自己学習で使用（実務外）</td>
               </tr>
             
               <tr>
                 
-                <td rowspan="6">ツール(その他)</td>
+                <td rowspan="6" class="categoryTitle">ツール(その他)</td>
                 
                 <td>docker</td>
                 <td>半年</td>
@@ -382,7 +386,7 @@
       <section class="lifework subSection">
   <h3 class="subSectionTitle"><span>LIFE WORK</span></h3>
   <div class="subsectionContents">
-    <ul class="lifeworkList">
+    <ul class="modalItemList jscModalGroup">
       
       <li class="jscModalItem">
         <div class="workThumb" data-modal="image">
@@ -407,7 +411,7 @@
         </div>
         <div class="workTextWrap">
           <h3 class="workTitle" data-modal="title">
-            Photostdio NATURA
+            PHOTOSTUDIO NATURA
           </h3>
           <p class="workDate" data-modal="date">
           制作時期： 2017/09
@@ -422,23 +426,59 @@
   </div>
 </section>
       <section class="slides subSection">
-  <h3 class="subSectionTitle"><span>SLIDES</span></h3>
-  <div class="seusectionContents">
-    <ul class="slideItemList subsectionContents">
+  <h3 class="subSectionTitle"><span>STUDY</span></h3>
+  <div class="subsectionContents">
+    <ul class="modalItemList jscModalGroup">
       
-      <li><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ_Rq1tFZ-aTNYhDUbiUrOYvhnk97-gdwqKUtykm0VU5G-n7lEZsoqp0vNpYx55l2i95KjwaZOxUJtm/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
-          webkitallowfullscreen="true">
-        </iframe>
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="./img/slide01.png" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            【卒業研究】ショップ袋認識を用いた人物属性推定方法
+          </h3>
+          <p class="workDate" data-modal="date">
+          制作時期： 2017/03
+          </p>
+          <p class="workText" data-modal="description">
+            ここに説明が入ります
+          </p>
+        </div>
       </li>
       
-      <li><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTgxAIlhI5a5clQ1p48eDP2dgIOExcEWmpVVYPfZoPmeMc5IASD8TaSG8NCvCMW64uu-37K4zl4hgjF/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
-          webkitallowfullscreen="true">
-        </iframe>
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="./img/slide02.png" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            【勉強会】これからはじめるSVG
+          </h3>
+          <p class="workDate" data-modal="date">
+          制作時期： 2018/04
+          </p>
+          <p class="workText" data-modal="description">
+            ここに説明が入ります
+          </p>
+        </div>
       </li>
       
-      <li><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSyZvxtpWkpX6ugHETppam178fzYhvFtRLbiJUA5jKWVfFdky66MygumvXcMSb7UmrUGaQazC2PqvaD/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
-          webkitallowfullscreen="true">
-        </iframe>
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="./img/slide03.png" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            【勉強会】BEMによるフロントエンドの設計
+          </h3>
+          <p class="workDate" data-modal="date">
+          制作時期： 2018/05
+          </p>
+          <p class="workText" data-modal="description">
+            ここに説明が入ります
+          </p>
+        </div>
       </li>
       
     </ul>

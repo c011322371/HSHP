@@ -201,7 +201,7 @@
         "href": "https://headgenerator.netlify.com/"
       },
       {
-        "title": "Photostdio NATURA",
+        "title": "PHOTOSTUDIO NATURA",
         "description": "フォトスタジオ　ナチューラのホームページ。画像の入れ替えをしやすいようにjsonで管理できるように実装してます。",
         "date": "2017/09",
         "img": "./img/photostudionatura.png",
@@ -209,10 +209,27 @@
       }
     ]
   },
-  "slide": [
-    "https://docs.google.com/presentation/d/e/2PACX-1vQ_Rq1tFZ-aTNYhDUbiUrOYvhnk97-gdwqKUtykm0VU5G-n7lEZsoqp0vNpYx55l2i95KjwaZOxUJtm/embed?start=false&loop=false&delayms=3000",
-    "https://docs.google.com/presentation/d/e/2PACX-1vTgxAIlhI5a5clQ1p48eDP2dgIOExcEWmpVVYPfZoPmeMc5IASD8TaSG8NCvCMW64uu-37K4zl4hgjF/embed?start=false&loop=false&delayms=3000",
-    "https://docs.google.com/presentation/d/e/2PACX-1vSyZvxtpWkpX6ugHETppam178fzYhvFtRLbiJUA5jKWVfFdky66MygumvXcMSb7UmrUGaQazC2PqvaD/embed?start=false&loop=false&delayms=3000"
+  "slide": [{
+      "title": "【卒業研究】ショップ袋認識を用いた人物属性推定方法",
+      "description": "ここに説明が入ります",
+      "date": "2017/03",
+      "img": "./img/slide01.png",
+      "href": "https://headgenerator.netlify.com/"
+    },
+    {
+      "title": "【勉強会】これからはじめるSVG",
+      "description": "ここに説明が入ります",
+      "date": "2018/04",
+      "img": "./img/slide02.png",
+      "href": "https://photostudionatura.netlify.com/"
+    },
+    {
+      "title": "【勉強会】BEMによるフロントエンドの設計",
+      "description": "ここに説明が入ります",
+      "date": "2018/05",
+      "img": "./img/slide03.png",
+      "href": "https://photostudionatura.netlify.com/"
+    }
   ],
   "copyright": "Copyright © H.sasaki 2018"
 }

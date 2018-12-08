@@ -1,11 +1,23 @@
 <section class="slides subSection">
-  <h3 class="subSectionTitle"><span>SLIDES</span></h3>
-  <div class="seusectionContents">
-    <ul class="slideItemList subsectionContents">
-      <% dataType.forEach(function(slide) { %>
-      <li><iframe src="<%- slide %>" frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
-          webkitallowfullscreen="true">
-        </iframe>
+  <h3 class="subSectionTitle"><span>STUDY</span></h3>
+  <div class="subsectionContents">
+    <ul class="modalItemList jscModalGroup">
+      <% dataType.forEach(function(item) { %>
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="<%- item.img %>" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            <%- item.title %>
+          </h3>
+          <p class="workDate" data-modal="date">
+          制作時期： <%- item.date %>
+          </p>
+          <p class="workText" data-modal="description">
+            <%- item.description %>
+          </p>
+        </div>
       </li>
       <% }); %>
     </ul>
