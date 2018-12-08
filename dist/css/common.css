@@ -90,7 +90,8 @@ html,
 body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   word-break: break-word;
-  line-height: 1.4; }
+  line-height: 1.6;
+  background-color: #272422; }
 
 .linkColor {
   color: #0FA07F; }
