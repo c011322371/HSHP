@@ -186,6 +186,9 @@ main {
   padding: 120px 40px 40px;
   background-color: #272422;
   color: #CCCCCC; }
+  @media screen and (max-width: 510px) {
+    main {
+      padding: 40px 20px; } }
 
 .mainContents {
   display: -webkit-box;
@@ -207,6 +210,10 @@ main {
 
 .section + .section {
   margin-top: 120px; }
+
+@media screen and (max-width: 510px) {
+  .section + .section {
+    margin-top: 40px; } }
 
 .sectionTitle {
   position: relative;
@@ -313,6 +320,10 @@ modal
   height: 50px;
   background-color: #333333;
   text-align: center; }
+
+@media screen and (max-width: 510px) {
+  .modalHeader {
+    background-color: transparent; } }
 
 .modalPageNum {
   line-height: 50px;
@@ -457,7 +468,7 @@ modal
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); }
     .modalContents .modalImage {
-      height: 100%; }
+      height: calc(100% - 50px); }
   .modalMainContents {
     position: relative;
     padding: 0; }
@@ -532,6 +543,12 @@ skill
   font-weight: bold;
   border-bottom: solid 1px #4E4C4C; }
 
+@media screen and (max-width: 510px) {
+  .skill td.category,
+  .skill td.period,
+  .skill td.level {
+    font-size: 12px; } }
+
 .skill td.category {
   width: 40%; }
 
@@ -540,6 +557,14 @@ skill
 
 .skill td.level {
   width: 50%; }
+
+@media screen and (max-width: 510px) {
+  .skill td.category {
+    width: 40%; }
+  .skill td.period {
+    width: 20%; }
+  .skill td.level {
+    width: 40%; } }
 
 .skill td.categoryTitle {
   font-weight: bold; }

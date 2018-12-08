@@ -168,6 +168,10 @@ main {
   padding: 120px 40px 40px;
   background-color: #272422;
   color: #CCCCCC;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 40px 20px;
+  }
 }
 
 .mainContents {
@@ -189,6 +193,12 @@ main {
 
 .section+.section {
   margin-top: 120px;
+}
+
+@include max-screen($breakpoint-mobile) {
+  .section+.section {
+    margin-top: 40px;
+  }
 }
 
 .sectionTitle {
@@ -313,6 +323,12 @@ modal
   height: 50px;
   background-color: #333333;
   text-align: center;
+}
+
+@include max-screen($breakpoint-mobile) {
+  .modalHeader {
+    background-color: transparent;
+  }
 }
 
 .modalPageNum {
@@ -492,7 +508,7 @@ modal
     background-color: rgba(0, 0, 0, 0.7);
 
     .modalImage {
-      height: 100%;
+      height: calc(100% - 50px);
     }
   }
 
@@ -608,10 +624,18 @@ skill
   td.category,
   td.period,
   td.level {
-    // background-color: #E6E6E6;
     font-size: 16px;
     font-weight: bold;
     border-bottom: solid 1px #4E4C4C;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+
+    td.category,
+    td.period,
+    td.level {
+      font-size: 12px;
+    }
   }
 
   td.category {
@@ -624,6 +648,20 @@ skill
 
   td.level {
     width: 50%;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    td.category {
+      width: 40%;
+    }
+
+    td.period {
+      width: 20%;
+    }
+
+    td.level {
+      width: 40%;
+    }
   }
 
   td.categoryTitle {
