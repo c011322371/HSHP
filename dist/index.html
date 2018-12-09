@@ -85,6 +85,7 @@
       <section class="modalInfo">
         <ul class="modalInfoList">
           <li class="modalTitle jscModalTitle"></li>
+          <li class="modalLink jscModalLink"><a href="#" class="linkColor" target="_blank"></a></li>
           <li class="modalDate jscModalDate"></li>
           <li class="modalDescription jscModalDescription"></li>
         </ul>
@@ -117,13 +118,13 @@
       <li>
         <dl>
           <dt>職務経験: </dt>
-          <dd>大学は東京工科大学にて情報科専攻。<br>
-            卒業研究では、深層学習を用いたマーケティング情報取得支援の研究に取り組む。<br>
-            卒業後は、株式会社例ハウオリに入社。<br>
+          <dd>大学は東京工科大学・情報科専攻。<br>
+            卒業研究では、深層学習を用いたマーケティング支援の研究に取り組む。<br>
+            卒業後は、株式会社レイハウオリに入社。<br>
             約1年間、本社で受託案件に務める。電話やミーティングで顧客折衝を経験。<br>
             ランディングページ制作から企業の社内ツールのフロントエンド部分の制作に携わる。<br>
             その後、パートナー会社にて、大手飲食サイト・サービスの1つの保守運用プロダクトチームに配属。<br>
-            膨大で複雑な仕様の把握や、保守性・拡張性に注力した開発方法を実務経験を経て身に着ける。</dd>
+            複雑な仕様の把握や、保守性・拡張性に注力した開発方法を経験する。</dd>
         </dl>
       </li>
       <li>
@@ -399,35 +400,65 @@
       
       <li class="jscModalItem">
         <div class="workThumb" data-modal="image">
-          <img src="./img/headgenerator.png" alt="">
-        </div>
-        <div class="workTextWrap">
-          <h3 class="workTitle" data-modal="title">
-            HEAD GENERATOR
-          </h3>
-          <p class="workDate" data-modal="date">
-          制作時期： 2018/01
-          </p>
-          <p class="workText" data-modal="description">
-            作業効率化用。metaタグをカスタマイズして出力し、コピーアンドペーストできるジェネレータのようなもの。
-          </p>
-        </div>
-      </li>
-      
-      <li class="jscModalItem">
-        <div class="workThumb" data-modal="image">
-          <img src="./img/photostudionatura.png" alt="">
+          <img src="./img/lifework/lifework01.png" alt="">
         </div>
         <div class="workTextWrap">
           <h3 class="workTitle" data-modal="title">
             PHOTOSTUDIO NATURA
           </h3>
-          <p class="workDate" data-modal="date">
-          制作時期： 2017/09
-          </p>
-          <p class="workText" data-modal="description">
-            フォトスタジオ　ナチューラのホームページ。画像の入れ替えをしやすいようにjsonで管理できるように実装してます。
-          </p>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://photostudionatura.netlify.com/</li>
+            <li data-modal="date">制作時期： 2018/01</li>
+            <li data-modal="description">父親の会社であるフォトスタジオの紹介サイトを制作致しました。作成期間は、3人日程です。フォトギャラリーコンテンツがメインなので、管理しやすいようにjson形式でカテゴリー毎の画像を追加できるようにしています。</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="./img/lifework/lifework02.png" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            GENERATOR01
+          </h3>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://headgenerator.netlify.com/</li>
+            <li data-modal="date">制作時期： 2017/09</li>
+            <li data-modal="description">個人でサイトを制作する際にmetaタグなどhead内の要素を自由にカスタマイズ・作成できるようなジェネレータをイメージして作りました。作成期間は1.5人日ほどです。こちらもjson形式でデータを管理しています。機能は十分ですがUI改善施策中なので、まだ実用化には遠いです。</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="./img/lifework/lifework03.png" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            自己紹介サイト
+          </h3>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://hshp.netlify.com/</li>
+            <li data-modal="date">制作時期： 2017/05</li>
+            <li data-modal="description">本サイトです。現在もアップデート中です。基本的にはejsとscssで管理しています。SPAフレームワークのような管理方法を用い、jsonデータを親から子パーツへ受け渡し、javascriptでコンテンツ生成をしています。</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="jscModalItem">
+        <div class="workThumb" data-modal="image">
+          <img src="./img/lifework/lifework04.png" alt="">
+        </div>
+        <div class="workTextWrap">
+          <h3 class="workTitle" data-modal="title">
+            PHOTOSTUDIO NATURA(改)
+          </h3>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://sad-bohr-a8c08b.netlify.com/</li>
+            <li data-modal="date">制作時期： 2017/11</li>
+            <li data-modal="description">フォトスタジオ　ナチューラのホームページの改善を行なっています（現在作成途中）。アクセス速度などを考慮し、React.jsを用いて作成しています。前回はフォトグラファーサイト寄りだったので、今回は会社公式サイトとしての実用に向けて制作しています。またより質にこだわり、ワイヤーフレーム・ムードボードを制作し、コーディング着手までに時間を掛け、準備を行いました。</li>
+          </ul>
         </div>
       </li>
       
@@ -441,52 +472,49 @@
       
       <li class="jscModalItem">
         <div class="workThumb" data-modal="image">
-          <img src="./img/slide01.png" alt="">
+          <img src="./img/slide/slide01.png" alt="">
         </div>
         <div class="workTextWrap">
           <h3 class="workTitle" data-modal="title">
             【卒業研究】ショップ袋認識を用いた人物属性推定方法
           </h3>
-          <p class="workDate" data-modal="date">
-          制作時期： 2017/03
-          </p>
-          <p class="workText" data-modal="description">
-            ここに説明が入ります
-          </p>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://docs.google.com/presentation/d/17k_PR6Qs1cWmHQLXAzCAK8u0X_woMeoWM-2DX2X3uAI/edit?usp=sharing</li>
+            <li data-modal="date">制作時期： 2017/03</li>
+            <li data-modal="description">卒業研究内容です。マーケティング情報取得の支援をテーマに深層学習を用いた研究を行いました。</li>
+          </ul>
         </div>
       </li>
       
       <li class="jscModalItem">
         <div class="workThumb" data-modal="image">
-          <img src="./img/slide02.png" alt="">
+          <img src="./img/slide/slide02.png" alt="">
         </div>
         <div class="workTextWrap">
           <h3 class="workTitle" data-modal="title">
             【勉強会】これからはじめるSVG
           </h3>
-          <p class="workDate" data-modal="date">
-          制作時期： 2018/04
-          </p>
-          <p class="workText" data-modal="description">
-            ここに説明が入ります
-          </p>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://docs.google.com/presentation/d/1GndJ2WKrL7M_4a-PsGaOB4kE7cau9vlX_BO6xuskaIw/edit?usp=sharing</li>
+            <li data-modal="date">制作時期： 2018/04</li>
+            <li data-modal="description">SVGについてリサーチした結果をまとめました。</li>
+          </ul>
         </div>
       </li>
       
       <li class="jscModalItem">
         <div class="workThumb" data-modal="image">
-          <img src="./img/slide03.png" alt="">
+          <img src="./img/slide/slide03.png" alt="">
         </div>
         <div class="workTextWrap">
           <h3 class="workTitle" data-modal="title">
             【勉強会】BEMによるフロントエンドの設計
           </h3>
-          <p class="workDate" data-modal="date">
-          制作時期： 2018/05
-          </p>
-          <p class="workText" data-modal="description">
-            ここに説明が入ります
-          </p>
+          <ul class="assetsInfoList">
+            <li data-modal="href">https://docs.google.com/presentation/d/1n4MdDpM46tNK0L03drlepdC5DtzbRfnnL1iNAYldOAk/edit?usp=sharing</li>
+            <li data-modal="date">制作時期： 2018/05</li>
+            <li data-modal="description">保守をする上での必要な知識としてBEMについてまとめてみました。</li>
+          </ul>
         </div>
       </li>
       

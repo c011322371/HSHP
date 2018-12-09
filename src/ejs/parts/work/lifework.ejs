@@ -11,12 +11,11 @@
           <h3 class="workTitle" data-modal="title">
             <%- item.title %>
           </h3>
-          <p class="workDate" data-modal="date">
-          制作時期： <%- item.date %>
-          </p>
-          <p class="workText" data-modal="description">
-            <%- item.description %>
-          </p>
+          <ul class="assetsInfoList">
+            <li data-modal="href"><%- item.href %></li>
+            <li data-modal="date">制作時期： <%- item.date %></li>
+            <li data-modal="description"><%- item.description %></li>
+          </ul>
         </div>
       </li>
       <% }); %>

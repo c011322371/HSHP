@@ -450,10 +450,16 @@ modal
     max-height: 200px;
     margin-top: 48px;
     padding: 0 16px;
-    color: #333333;
-    overflow-y: scroll; }
+    color: #333333; }
     .modalMainContents .modalInfo .modalInfoList .modalTitle {
       font-size: 18px; }
+    .modalMainContents .modalInfo .modalInfoList .modalLink {
+      font-size: 12px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      cursor: pointer; }
+      .modalMainContents .modalInfo .modalInfoList .modalLink:hover {
+        opacity: 0.5; }
     .modalMainContents .modalInfo .modalInfoList .modalDate {
       margin-top: 16px;
       font-size: 12px;
@@ -461,7 +467,11 @@ modal
       border-bottom: solid 1px #ccc;
       display: inline-block; }
     .modalMainContents .modalInfo .modalInfoList .modalDescription {
-      margin-top: 16px; }
+      margin-top: 16px;
+      max-height: 4.2em;
+      font-size: 14px;
+      line-height: 1.4;
+      overflow: scroll; }
 
 @media screen and (max-width: 510px) {
   .modalContents {
@@ -475,17 +485,20 @@ modal
     padding: 0; }
     .modalMainContents .modalInfo {
       position: absolute;
-      bottom: 0;
-      height: 20%;
+      bottom: 32px;
+      margin-top: 0;
       background-color: transparent;
       color: #CCCCCC; }
       .modalMainContents .modalInfo .modalInfoList .modalTitle {
         font-size: 14px; }
-      .modalMainContents .modalInfo .modalInfoList .modalDate,
-      .modalMainContents .modalInfo .modalInfoList .modalDescription {
-        font-size: 12px; }
       .modalMainContents .modalInfo .modalInfoList .modalDate {
+        font-size: 12px;
         margin-top: 12px; }
+      .modalMainContents .modalInfo .modalInfoList .modalDescription {
+        font-size: 12px;
+        line-height: 1.4;
+        max-height: 4.2em;
+        overflow-y: scroll; }
   .modalClose:before, .modalClose:after {
     background-color: #CCCCCC; }
   .modalNext,
@@ -631,12 +644,12 @@ work
       background-color: #222222; }
       .modalItemList > li .workTextWrap .workTitle {
         font-size: 16px; }
-      .modalItemList > li .workTextWrap .workDate,
-      .modalItemList > li .workTextWrap .workText {
-        display: none; }
     @media screen and (max-width: 510px) {
       .modalItemList > li .workTextWrap .workTitle {
         font-size: 16px; } }
+
+.assetsInfoList {
+  display: none; }
 
 /*---------------------------------------------------------------------
 slides

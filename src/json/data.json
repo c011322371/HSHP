@@ -194,41 +194,55 @@
   ],
   "work": {
     "lifework": [{
-        "title": "HEAD GENERATOR",
-        "description": "作業効率化用。metaタグをカスタマイズして出力し、コピーアンドペーストできるジェネレータのようなもの。",
+        "title": "PHOTOSTUDIO NATURA",
+        "description": "父親の会社であるフォトスタジオの紹介サイトを制作致しました。作成期間は、3人日程です。フォトギャラリーコンテンツがメインなので、管理しやすいようにjson形式でカテゴリー毎の画像を追加できるようにしています。",
         "date": "2018/01",
-        "img": "./img/headgenerator.png",
+        "img": "./img/lifework/lifework01.png",
+        "href": "https://photostudionatura.netlify.com/"
+      },
+      {
+        "title": "GENERATOR01",
+        "description": "個人でサイトを制作する際にmetaタグなどhead内の要素を自由にカスタマイズ・作成できるようなジェネレータをイメージして作りました。作成期間は1.5人日ほどです。こちらもjson形式でデータを管理しています。機能は十分ですがUI改善施策中なので、まだ実用化には遠いです。",
+        "date": "2017/09",
+        "img": "./img/lifework/lifework02.png",
         "href": "https://headgenerator.netlify.com/"
       },
       {
-        "title": "PHOTOSTUDIO NATURA",
-        "description": "フォトスタジオ　ナチューラのホームページ。画像の入れ替えをしやすいようにjsonで管理できるように実装してます。",
-        "date": "2017/09",
-        "img": "./img/photostudionatura.png",
-        "href": "https://photostudionatura.netlify.com/"
+        "title": "自己紹介サイト",
+        "description": "本サイトです。現在もアップデート中です。基本的にはejsとscssで管理しています。SPAフレームワークのような管理方法を用い、jsonデータを親から子パーツへ受け渡し、javascriptでコンテンツ生成をしています。",
+        "date": "2017/05",
+        "img": "./img/lifework/lifework03.png",
+        "href": "https://hshp.netlify.com/"
+      },
+      {
+        "title": "PHOTOSTUDIO NATURA(改)",
+        "description": "フォトスタジオ　ナチューラのホームページの改善を行なっています（現在作成途中）。アクセス速度などを考慮し、React.jsを用いて作成しています。前回はフォトグラファーサイト寄りだったので、今回は会社公式サイトとしての実用に向けて制作しています。またより質にこだわり、ワイヤーフレーム・ムードボードを制作し、コーディング着手までに時間を掛け、準備を行いました。",
+        "date": "2017/11",
+        "img": "./img/lifework/lifework04.png",
+        "href": "https://sad-bohr-a8c08b.netlify.com/"
       }
     ]
   },
   "slide": [{
       "title": "【卒業研究】ショップ袋認識を用いた人物属性推定方法",
-      "description": "ここに説明が入ります",
+      "description": "卒業研究内容です。マーケティング情報取得の支援をテーマに深層学習を用いた研究を行いました。",
       "date": "2017/03",
-      "img": "./img/slide01.png",
-      "href": "https://headgenerator.netlify.com/"
+      "img": "./img/slide/slide01.png",
+      "href": "https://docs.google.com/presentation/d/17k_PR6Qs1cWmHQLXAzCAK8u0X_woMeoWM-2DX2X3uAI/edit?usp=sharing"
     },
     {
       "title": "【勉強会】これからはじめるSVG",
-      "description": "ここに説明が入ります",
+      "description": "SVGについてリサーチした結果をまとめました。",
       "date": "2018/04",
-      "img": "./img/slide02.png",
-      "href": "https://photostudionatura.netlify.com/"
+      "img": "./img/slide/slide02.png",
+      "href": "https://docs.google.com/presentation/d/1GndJ2WKrL7M_4a-PsGaOB4kE7cau9vlX_BO6xuskaIw/edit?usp=sharing"
     },
     {
       "title": "【勉強会】BEMによるフロントエンドの設計",
-      "description": "ここに説明が入ります",
+      "description": "保守をする上での必要な知識としてBEMについてまとめてみました。",
       "date": "2018/05",
-      "img": "./img/slide03.png",
-      "href": "https://photostudionatura.netlify.com/"
+      "img": "./img/slide/slide03.png",
+      "href": "https://docs.google.com/presentation/d/1n4MdDpM46tNK0L03drlepdC5DtzbRfnnL1iNAYldOAk/edit?usp=sharing"
     }
   ],
   "copyright": "Copyright © H.sasaki 2018"

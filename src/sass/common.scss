@@ -480,11 +480,15 @@ modal
     margin-top: 48px;
     padding: 0 16px;
     color: #333333;
-    overflow-y: scroll;
 
     .modalInfoList {
       .modalTitle {
         font-size: 18px;
+      }
+
+      .modalLink {
+        font-size: 12px;
+        @include hover_animation();
       }
 
       .modalDate {
@@ -497,6 +501,10 @@ modal
 
       .modalDescription {
         margin-top: 16px;
+        max-height: 4.2em;
+        font-size: 14px;
+        line-height: 1.4;
+        overflow: scroll;
       }
     }
   }
@@ -519,8 +527,8 @@ modal
 
     .modalInfo {
       position: absolute;
-      bottom: 0;
-      height: 20%;
+      bottom: 32px;
+      margin-top: 0;
       background-color: transparent;
       color: #CCCCCC;
 
@@ -529,13 +537,16 @@ modal
           font-size: 14px;
         }
 
-        .modalDate,
-        .modalDescription {
+        .modalDate {
           font-size: 12px;
+          margin-top: 12px;
         }
 
-        .modalDate {
-          margin-top: 12px;
+        .modalDescription {
+          font-size: 12px;
+          line-height: 1.4;
+          max-height: 4.2em;
+          overflow-y: scroll;
         }
       }
     }
@@ -768,11 +779,6 @@ work
       .workTitle {
         font-size: 16px;
       }
-
-      .workDate,
-      .workText {
-        display: none;
-      }
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -783,6 +789,10 @@ work
       }
     }
   }
+}
+
+.assetsInfoList {
+  display: none;
 }
 
 /*---------------------------------------------------------------------

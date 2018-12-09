@@ -20,6 +20,7 @@ HSHP.MODAL_MANAGER.prototype = {
 
     this.$modalImage = $('.jscModalImage');
     this.$modalTitle = $('.jscModalTitle');
+    this.$modalLink = $('.jscModalLink').find('a');
     this.$modalDate = $('.jscModalDate');
     this.$modalDescription = $('.jscModalDescription');
     this.$currentNum = $('.jscCurrentNum');
@@ -52,6 +53,7 @@ HSHP.MODAL_MANAGER.prototype = {
     var data = {
       "image": this.$currentItem.find('[data-modal="image"]').find('img'),
       "title": this.$currentItem.find('[data-modal="title"]').text(),
+      "href": this.$currentItem.find('[data-modal="href"]').text(),
       "date": this.$currentItem.find('[data-modal="date"]').text(),
       "description": this.$currentItem.find('[data-modal="description"]').text()
     };
@@ -62,6 +64,8 @@ HSHP.MODAL_MANAGER.prototype = {
     this.$currentNum.text(this.$currentItem.index() + 1);
     this.$itemLength.text(this.$modalItem.length);
     this.$modalTitle.text(data.title);
+    this.$modalLink.text(data.href);
+    this.$modalLink.attr('href', data.href);
     this.$modalDate.text(data.date);
     this.$modalDescription.text(data.description);
   },
