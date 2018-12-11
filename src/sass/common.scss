@@ -455,7 +455,7 @@ modal
   bottom: 0;
   left: 0;
   margin: auto;
-  z-index: 2;
+  z-index: 9999;
   background: #FFFFFF;
 }
 
@@ -476,7 +476,8 @@ modal
   }
 
   .modalInfo {
-    max-height: 200px;
+    max-height: 160px;
+    overflow: scroll;
     margin-top: 48px;
     padding: 0 16px;
     color: #333333;
@@ -501,10 +502,6 @@ modal
 
       .modalDescription {
         margin-top: 16px;
-        max-height: 4.2em;
-        font-size: 14px;
-        line-height: 1.4;
-        overflow: scroll;
       }
     }
   }
@@ -528,6 +525,7 @@ modal
     .modalInfo {
       position: absolute;
       bottom: 32px;
+      max-height: 100px;
       margin-top: 0;
       background-color: transparent;
       color: #CCCCCC;
@@ -544,9 +542,6 @@ modal
 
         .modalDescription {
           font-size: 12px;
-          line-height: 1.4;
-          max-height: 4.2em;
-          overflow-y: scroll;
         }
       }
     }
