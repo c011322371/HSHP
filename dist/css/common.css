@@ -392,17 +392,19 @@ h1 {
 modal
 ---------------------------------------------------------------------*/
 .modalWrap {
-  display: none; }
-
-.modalBack {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
   width: 100%;
-  height: 100vh;
-  background: #000;
-  opacity: 0.8;
-  z-index: 1; }
+  height: 100vh; }
+
+.modalBack {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.8; }
 
 .modalHeader {
   width: 100%;
@@ -510,17 +512,16 @@ modal
             transform: translateX(-3px); }
 
 .modalContents {
-  width: calc(100% - 100px);
-  height: calc(100vh - 100px);
-  max-width: 1040px;
-  max-height: 800px;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  z-index: 9999;
+  width: calc(100% - 100px);
+  height: calc(100vh - 100px);
+  max-width: 1040px;
+  max-height: 800px;
   background: #FFFFFF; }
 
 .modalMainContents {

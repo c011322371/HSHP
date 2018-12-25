@@ -1,6 +1,7 @@
 {
   "page_title": "佐々木耀 | Hikaru Sasaki",
-  "navigation": [{
+  "navigation": [
+    {
       "name": "TOP",
       "href": "#top"
     },
@@ -17,7 +18,8 @@
       "href": "#work"
     }
   ],
-  "skill": [{
+  "skill": [
+    {
       "category": "言語(フロントエンド)",
       "name": "HTML",
       "duration": "2年",
@@ -39,25 +41,25 @@
       "category": "言語(フロントエンド)",
       "name": "Stylus",
       "duration": "1年",
-      "description": "仕様・デザインに合わせ実装可能、簡単なプログラミングが可能"
+      "description": "仕様・デザインに合わせ実装可能"
     },
     {
       "category": "言語(フロントエンド)",
       "name": "Sass",
       "duration": "1.5年",
-      "description": "仕様・デザインに合わせ実装可能、簡単なプログラミングが可能"
+      "description": "仕様・デザインに合わせ実装可能"
     },
     {
       "category": "言語(フロントエンド)",
       "name": "java script",
       "duration": "2年",
-      "description": "簡単なプログラミングが可能"
+      "description": "仕様に伴った実装が可能"
     },
     {
       "category": "言語(フロントエンド)",
       "name": "jQuery",
       "duration": "2年",
-      "description": "フロントエンド領域で基本的に必要とされるwebの機能は実装可能"
+      "description": "仕様に伴った実装が可能"
     },
     {
       "category": "言語(フロントエンド)",
@@ -93,13 +95,13 @@
       "category": "ツール",
       "name": "gulp",
       "duration": "1年半",
-      "description": "簡単なタスクの設定可能"
+      "description": "タスクの作成や設定が可能"
     },
     {
       "category": "ツール",
       "name": "webpack",
       "duration": "1ヶ月",
-      "description": "バンドル設定可能"
+      "description": "バンドルの設定が可能"
     },
     {
       "category": "クリエイティブツール",
@@ -193,53 +195,55 @@
     }
   ],
   "work": {
-    "lifework": [{
+    "lifework": [
+      {
         "title": "PHOTOSTUDIO NATURA",
-        "description": "父親の会社であるフォトスタジオの紹介サイトを制作致しました。作成期間は、3人日程です。フォトギャラリーコンテンツがメインなので、管理しやすいようにjson形式でカテゴリー毎の画像を追加できるようにしています。",
+        "description": "父のフォトスタジオのサイトを制作しました。作成期間は、約4日程です。管理を簡易化するため、json形式を用いてカテゴリー毎に画像を追加・削除可能にしています。",
         "date": "2018/01",
         "img": "./img/lifework/lifework01.png",
         "href": "https://photostudionatura.netlify.com/"
       },
       {
         "title": "GENERATOR01",
-        "description": "個人でサイトを制作する際にmetaタグなどhead内の要素を自由にカスタマイズ・作成できるようなジェネレータをイメージして作りました。作成期間は1.5人日ほどです。こちらもjson形式でデータを管理しています。機能は十分ですがUI改善施策中なので、まだ実用化には遠いです。",
+        "description": "webサイトを制作するにあたり、metaタグなどhead内の要素を簡易的にカスタマイズするために作成したhead内要素自動生成ジェネレータ。作成期間は2日程です。json形式でアイテムを管理しています。",
         "date": "2017/09",
         "img": "./img/lifework/lifework02.png",
         "href": "https://headgenerator.netlify.com/"
       },
       {
         "title": "自己紹介サイト",
-        "description": "本サイトです。現在もアップデート中です。基本的にはejsとscssで管理しています。SPAフレームワークのような管理方法を用い、jsonデータを親から子パーツへ受け渡し、javascriptでコンテンツ生成をしています。",
+        "description": "ejsでコンテンツをパーツ化し、jsonデータを親から子パーツへ受け渡し、javascriptでコンテンツ生成をしています。",
         "date": "2017/05",
         "img": "./img/lifework/lifework03.png",
         "href": "https://hshp.netlify.com/"
       },
       {
         "title": "PHOTOSTUDIO NATURA(改)",
-        "description": "フォトスタジオ　ナチューラのホームページの改善を行なっています（現在作成途中）。アクセス速度などを考慮し、React.jsを用いて作成しています。前回はフォトグラファーサイト寄りだったので、今回は会社公式サイトとしての実用に向けて制作しています。またより質にこだわり、ワイヤーフレーム・ムードボードを制作し、コーディング着手までに時間を掛け、準備を行いました。",
+        "description": "父のフォトスタジオ公式サイトの改善施策です。コーポレートサイトとして、前回より会社情報やコンテンツを充実させ、Instagramなど各SNSと連携し、集客をする予定です。前回よりデザイン・UIなどの質にこだわり、ワイヤーフレーム・ムードボードを制作し、コーディング着手までに時間を掛け、準備を行っています。",
         "date": "2017/11",
         "img": "./img/lifework/lifework04.png",
         "href": "https://sad-bohr-a8c08b.netlify.com/"
       }
     ]
   },
-  "slide": [{
+  "slide": [
+    {
       "title": "【卒業研究】ショップ袋認識を用いた人物属性推定方法",
-      "description": "卒業研究内容です。マーケティング情報取得の支援をテーマに深層学習を用いた研究を行いました。",
+      "description": "JRの駅などの自動販売機は、ユーザの性別、年齢をAIで認識し飲料をレコメンドしています。このように、画像認識によって外見のデータを用いた様々な機能の実用化が進んでいる一方、外見からの情報（年齢・性別）は、ユーザが選択した要素ではなく、嗜好などユーザの性質的な要素は取得できていません。そこで、外見情報からユーザの嗜好を認識する手段として、ショップ袋認識を提案しました。歩行中のユーザに対し、購入履歴やユーザの買い物導線など新たな情報追加をし、付加価値を見出したいと考えました。",
       "date": "2017/03",
       "img": "./img/slide/slide01.png",
       "href": "https://docs.google.com/presentation/d/17k_PR6Qs1cWmHQLXAzCAK8u0X_woMeoWM-2DX2X3uAI/edit?usp=sharing"
     },
     {
       "title": "【勉強会】これからはじめるSVG",
-      "description": "SVGについてリサーチした結果をまとめました。",
+      "description": "SVGを業務で使用するにあたり、改めてリサーチした結果をまとめました。",
       "date": "2018/04",
       "img": "./img/slide/slide02.png",
       "href": "https://docs.google.com/presentation/d/1GndJ2WKrL7M_4a-PsGaOB4kE7cau9vlX_BO6xuskaIw/edit?usp=sharing"
     },
     {
       "title": "【勉強会】BEMによるフロントエンドの設計",
-      "description": "保守をする上での必要な知識としてBEMについてまとめてみました。",
+      "description": "保守をする上での必要な知識としてBEM設計についてまとめてみました。",
       "date": "2018/05",
       "img": "./img/slide/slide03.png",
       "href": "https://docs.google.com/presentation/d/1n4MdDpM46tNK0L03drlepdC5DtzbRfnnL1iNAYldOAk/edit?usp=sharing"
