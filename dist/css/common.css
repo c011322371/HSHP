@@ -262,6 +262,94 @@ main {
   padding: 32px 0; }
 
 /*---------------------------------------------------------------------
+intro
+---------------------------------------------------------------------*/
+.introWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: #272422;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .introWrap .introAnimation {
+    display: none; }
+  .introWrap.isLoading {
+    opacity: 1;
+    z-index: 9999; }
+    .introWrap.isLoading .introAnimation {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      width: 100%;
+      max-width: 480px;
+      height: 36px;
+      margin: auto;
+      overflow: visible;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      cursor: default; }
+      .introWrap.isLoading .introAnimation > div {
+        opacity: 0;
+        -webkit-animation: flash 2s linear infinite;
+                animation: flash 2s linear infinite;
+        color: #0FA07F; }
+        .introWrap.isLoading .introAnimation > div:nth-child(2) {
+          -webkit-animation-delay: 0.2s;
+                  animation-delay: 0.2s; }
+        .introWrap.isLoading .introAnimation > div:nth-child(3) {
+          -webkit-animation-delay: 0.4s;
+                  animation-delay: 0.4s; }
+        .introWrap.isLoading .introAnimation > div:nth-child(4) {
+          -webkit-animation-delay: 0.6s;
+                  animation-delay: 0.6s; }
+        .introWrap.isLoading .introAnimation > div:nth-child(5) {
+          -webkit-animation-delay: 0.8s;
+                  animation-delay: 0.8s; }
+        .introWrap.isLoading .introAnimation > div:nth-child(6) {
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s; }
+        .introWrap.isLoading .introAnimation > div:nth-child(7) {
+          -webkit-animation-delay: 1.2s;
+                  animation-delay: 1.2s; }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0; }
+  35% {
+    opacity: 1; }
+  65% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes flash {
+  0% {
+    opacity: 0; }
+  35% {
+    opacity: 1; }
+  65% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*---------------------------------------------------------------------
 top
 ---------------------------------------------------------------------*/
 .top {

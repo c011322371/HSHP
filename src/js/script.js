@@ -1,5 +1,11 @@
 var HSHP = HSHP || {};
 
+HSHP.INTRO_ANIMATION = {
+  init: function () {
+    document.querySelectorAll('.jscIntro')[0].classList.remove('isLoading');
+  }
+};
+
 HSHP.MODAL_MANAGER = function ($modalGroup) {
   this.$modalGroup = $modalGroup;
   this.init();
@@ -86,7 +92,7 @@ HSHP.MODAL_MANAGER.prototype = {
       this.$modalInfoContents.fadeIn(this.TIMER);
     }.bind(this), this.TIMER);
   }
-}
+};
 
 HSHP.KV_SCROLL_INTERACTION = {
   init: function () {
@@ -109,11 +115,20 @@ HSHP.KV_SCROLL_INTERACTION = {
       }
     });
   }
-}
+};
 
-$(function () {
+// HTML要素を読み込んだ後に実行
+window.addEventListener("DOMContentLoaded", function () {
+  // 実行したい処理
+});
+
+// 画像などのオブジェクトを全て読み込んだ後に実行
+window.addEventListener("load", function () {
+  HSHP.INTRO_ANIMATION.init();
+
   $('.jscModalGroup').each(function () {
     new HSHP.MODAL_MANAGER($(this));
   });
+
   HSHP.KV_SCROLL_INTERACTION.init();
 });
