@@ -6,12 +6,27 @@ HSHP.INTRO_ANIMATION = {
   }
 };
 
-HSHP.MODAL_MANAGER = function ($modalGroup) {
+HSHP.MODAL_MANAGER = {
+  init: function () {
+    this.setParameter();
+    this.modalOparationInit();
+  },
+  setParameter: function () {
+    this.$modalGroup = $('.jscModalGroup');
+  },
+  modalOparationInit: function () {
+    this.$modalGroup.each(function () {
+      new HSHP.MODAL_OPARATION($(this));
+    });
+  }
+}
+
+HSHP.MODAL_OPARATION = function ($modalGroup) {
   this.$modalGroup = $modalGroup;
   this.init();
 };
 
-HSHP.MODAL_MANAGER.prototype = {
+HSHP.MODAL_OPARATION.prototype = {
   TIMER: 250,
   init: function () {
     this.setParameter();
@@ -23,7 +38,6 @@ HSHP.MODAL_MANAGER.prototype = {
     this.$closeTrigger = $('.jscModalClose');
     this.$next = $('.jscModalNext');
     this.$prev = $('.jscModalPrev');
-
     this.$modalImage = $('.jscModalImage');
     this.$modalTitle = $('.jscModalTitle');
     this.$modalLink = $('.jscModalLink').find('a');
@@ -125,10 +139,6 @@ window.addEventListener("DOMContentLoaded", function () {
 // 画像などのオブジェクトを全て読み込んだ後に実行
 window.addEventListener("load", function () {
   HSHP.INTRO_ANIMATION.init();
-
-  $('.jscModalGroup').each(function () {
-    new HSHP.MODAL_MANAGER($(this));
-  });
-
+  HSHP.MODAL_MANAGER.init();
   HSHP.KV_SCROLL_INTERACTION.init();
 });

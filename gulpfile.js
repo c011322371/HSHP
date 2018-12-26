@@ -62,7 +62,9 @@ var webserver = require('gulp-webserver');
 gulp.task('webserver', function () {
   gulp.src('./dist')
     .pipe(webserver({
-      livereload: true
+      host: '0.0.0.0', // ← 0.0.0.0を設定すると同一ネットワーク内から見ることができます
+      livereload: true,
+      open: true
     }));
 });
 
