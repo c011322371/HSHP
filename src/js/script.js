@@ -110,21 +110,17 @@ HSHP.MODAL_OPARATION.prototype = {
 
 HSHP.KV_SCROLL_INTERACTION = {
   init: function () {
-    this.setParameter();
     this.scrollEvent();
   },
-  setParameter: function () {
-    this.$window = $(window);
-    this.$kv = $('.jscKV');
-  },
   scrollEvent: function () {
-    var self = this;
-    var kvHeight = this.$kv.outerHeight();
-    this.$window.on('scroll', function () {
-      var scrollTop = $(this).scrollTop();
-      if (kvHeight >= scrollTop) {
-        self.$kv.css({
-          'background-position': '50% calc(50% + ' + scrollTop + 'px)'
+    var $kv = $('.jscKV');
+    var kvHeight = $kv.outerHeight();
+
+    window.addEventListener('scroll', function () {
+      var scrollY = window.scrollY;
+      if (kvHeight >= scrollY) {
+        $kv.css({
+          'background-position': '50% calc(50% + ' + scrollY + 'px)'
         });
       }
     });
