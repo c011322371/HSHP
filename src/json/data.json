@@ -247,6 +247,13 @@
       "date": "2018/05",
       "img": "./img/slide/slide03.png",
       "href": "https://docs.google.com/presentation/d/1n4MdDpM46tNK0L03drlepdC5DtzbRfnnL1iNAYldOAk/edit?usp=sharing"
+    },
+    {
+      "title": "React + Redux入門",
+      "description": "勉強会でインプットしたことをまとめました。",
+      "date": "2019/02",
+      "img": "./img/slide/slide04.png",
+      "href": "https://docs.google.com/presentation/d/1DrXz9M-yZCuBgzw-UR5quaIkfCrLWI66-IkpIKpC1dw/edit?usp=sharing"
     }
   ],
   "copyright": "Copyright © H.sasaki 2018"
